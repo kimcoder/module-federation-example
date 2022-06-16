@@ -1,0 +1,34 @@
+{
+  "name": "module-federation-example",
+  "version": "1.0.0",
+  "description": "example for webpack5 module federation",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start --ws",
+    "build": "npm run build --ws",
+    "test": "npm run test --ws"
+  },
+  "engines": {
+    "node": "> "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimcoder/module-federation-example.git"
+  },
+  "keywords": [
+    "webpack5",
+    "module",
+    "federation",
+    "micro",
+    "frontend"
+  ],
+  "author": "kimcoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimcoder/module-federation-example/issues"
+  },
+  "homepage": "https://github.com/kimcoder/module-federation-example#readme",
+  "workspaces": [
+    "packages/*"
+  ]
+}
