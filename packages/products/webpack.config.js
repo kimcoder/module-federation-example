@@ -41,7 +41,7 @@ module.exports = {
       filename: "products.remoteEntry.js",
       remotes: {
         core: "core@http://localhost:2000/core.remoteEntry.js",
-        shell: "shell@http://localhost:3000/shell.remoteEntry.js",
+        shell: `shell@//${getRemoteEntryHost(3000)}/shell.remoteEntry.js`,
       },
       exposes: {
         "./ProductsApplication": "./src/ProductsApplication",
@@ -62,3 +62,18 @@ module.exports = {
     }),
   ],
 };
+
+function getRemoteEntryHost(port) {
+  const { CODESANDBOX_SSE, HOSTNAME = "" } = process.env;
+
+  // Check if the example is running on codesandbox
+  // https://codesandbox.io/docs/environment
+  if (!CODESANDBOX_SSE) {
+    return `localhost:${port}`;
+  }
+
+  const parts = HOSTNAME.split("-");
+  const codesandboxId = parts[parts.length - 1];
+
+  return `${codesandboxId}-${port}.sse.codesandbox.io`;
+}
