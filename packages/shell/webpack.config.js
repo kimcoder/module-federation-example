@@ -4,14 +4,23 @@ const path = require("path");
 const { dependencies, name: packageName } = require("./package.json");
 
 module.exports = {
-  entry: "./src/index",
+  entry: {
+    shellApp: "./src/index",
+  },
   mode: "development",
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
     },
     port: 3000,
+    historyApiFallback: true,
     hot: "only",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers":
+        "X-Requested-With, content-type, Authorization",
+    },
   },
   output: {
     publicPath: "auto",
@@ -43,7 +52,7 @@ module.exports = {
         order: "order@http://localhost:3003/order.remoteEntry.js",
       },
       exposes: {
-        "./Shell": "./src/App",
+        "./Shell": "./src/Shell",
       },
       shared: {
         react: {

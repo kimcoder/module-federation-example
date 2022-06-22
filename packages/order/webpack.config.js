@@ -4,13 +4,16 @@ const path = require("path");
 const { dependencies, name: packageName } = require("./package.json");
 
 module.exports = {
-  entry: "./src/index",
+  entry: {
+    orderApp: "./src/index",
+  },
   mode: "development",
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
     },
     port: 3003,
+    historyApiFallback: true,
     hot: "only",
   },
   output: {
@@ -34,7 +37,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: packageName,
+      name: "order",
       filename: "order.remoteEntry.js",
       remotes: {
         core: "core@http://localhost:2000/core.remoteEntry.js",

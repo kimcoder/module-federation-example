@@ -4,13 +4,16 @@ const path = require("path");
 const { dependencies, name: packageName } = require("./package.json");
 
 module.exports = {
-  entry: "./src/index",
+  entry: {
+    mainApp: "./src/index",
+  },
   mode: "development",
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
     },
     port: 3001,
+    historyApiFallback: true,
     hot: "only",
   },
   output: {

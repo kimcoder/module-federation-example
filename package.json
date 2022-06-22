@@ -1,12 +1,10 @@
 {
   "name": "module-federation-example",
   "version": "1.0.0",
+  "private": true,
   "description": "example for webpack5 module federation",
-  "main": "index.js",
   "scripts": {
-    "start": "npm run start --ws",
-    "build": "npm run build --ws",
-    "test": "npm run test --ws"
+    "start": "turbo run start --parallel --no-cache"
   },
   "engines": {
     "node": "> "
@@ -30,5 +28,8 @@
   "homepage": "https://github.com/kimcoder/module-federation-example#readme",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "turbo": "^1.2.16"
+  }
 }
