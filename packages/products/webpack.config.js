@@ -40,7 +40,7 @@ module.exports = {
       name: "products",
       filename: "products.remoteEntry.js",
       remotes: {
-        core: "core@http://localhost:2000/core.remoteEntry.js",
+        core: `core@//${getRemoteEntryHost(2000)}/core.remoteEntry.js`,
         shell: `shell@//${getRemoteEntryHost(3000)}/shell.remoteEntry.js`,
       },
       exposes: {
