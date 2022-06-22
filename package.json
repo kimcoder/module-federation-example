@@ -7,12 +7,9 @@
     "start": "turbo run start --parallel --no-cache"
   },
   "engines": {
-    "node": "> 14"
+    "node": ">= 14"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kimcoder/module-federation-example.git"
-  },
+  "repository": "git+https://github.com/kimcoder/module-federation-example.git",
   "keywords": [
     "webpack5",
     "module",
