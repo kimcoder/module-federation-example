@@ -28,6 +28,5 @@
 
 ## Run Demo
 
-1. Run `npm install` in each directory under `packages/*`
-2. Run `npm install` in root
-3. Run `npm run start` in root
+1. Run `npm install` in root
+2. Run `npm run start` in root
