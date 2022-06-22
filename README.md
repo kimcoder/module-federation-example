@@ -6,7 +6,7 @@
 
 [node-image]: https://img.shields.io/badge/node.js-%3e=14.x-blue.svg
 [node-url]: https://nodejs.org/
-[npm-image]: https://img.shields.io/badge/npm-%3e=18.x-blue.svg
+[npm-image]: https://img.shields.io/badge/npm-%3e=8.x-blue.svg
 [npm-url]: https://npmjs.com/
 [webpack-image]: https://img.shields.io/badge/webpack-%3e=5.x-blue.svg
 [webpack-url]: https://webpack.js.org/
