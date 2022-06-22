@@ -15,14 +15,14 @@
 
 ## Architecture
 
-| Module | Description | host |
-| ------------- | ---------------------- | |
-| **core** | Core Library Container | |
-| **shell** | App Shell | http://localhost:3000 |
-| **main** | Standalone Application | http://localhost:3001 |
-| **order** | Standalone Application | http://localhost:3002 |
-| **products** | Standalone Application | http://localhost:3003 |
-| **others...** | Standalone Application | ... |
+| Module        | Description            | host                  |
+| ------------- | ---------------------- | --------------------- |
+| **core**      | Core Library Container | http://localhost:2000 |
+| **shell**     | App Shell              | http://localhost:3000 |
+| **main**      | Standalone Application | http://localhost:3001 |
+| **order**     | Standalone Application | http://localhost:3002 |
+| **products**  | Standalone Application | http://localhost:3003 |
+| **others...** | Standalone Application | ...                   |
 
 ![https://www.kimcoder.io/assets/images/federation-example.png](https://www.kimcoder.io/assets/images/federation-example.png)
 
