@@ -7,7 +7,7 @@
     "start": "turbo run start --parallel --no-cache"
   },
   "engines": {
-    "node": "> "
+    "node": "> 14"
   },
   "repository": {
     "type": "git",
